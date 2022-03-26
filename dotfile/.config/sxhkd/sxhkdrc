@@ -1,0 +1,2 @@
+alt + p
+	 rofi -modi drun,run -show drun -show-icons
