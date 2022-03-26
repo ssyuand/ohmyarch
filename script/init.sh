@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo chown syuan ~/ohmyarch -R
 DIR=$(pwd)
 . "$DIR/dependency.sh"
 . "$DIR/desktop.sh"
