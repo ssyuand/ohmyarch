@@ -46,8 +46,6 @@ sudo git clone https://aur.archlinux.org/yay.git ~/library/yay
 sudo chown -R syuan ~/library/*
 cd ~/library/yay && makepkg -si
 
-yay picom-jonaburg-git
-
 # fcitx
 printf "export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
