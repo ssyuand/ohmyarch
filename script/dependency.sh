@@ -32,6 +32,7 @@ yes | sudo pacman -Syu
 	"feh"
 	"uthash"
 	"meson"
+	"libev"
 	)
 for tool in ${tools[@]}; do
 	sudo pacman -S --needed --noconfirm $tool
