@@ -39,6 +39,7 @@ xrandr -s 1920x1080
 # AUR
 echo "AUR" | figlet
 sudo git clone https://aur.archlinux.org/yay.git
+sudo chown -R syuan ~/ohmyarch/*
 cd yay
 makepkg -si
 
