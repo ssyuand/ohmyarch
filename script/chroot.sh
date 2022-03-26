@@ -22,4 +22,3 @@ usermod -aG wheel,audio,video,optical,storage syuan
 
 cp -r /ohmyarch /home/syuan
 chown -R syuan /home/syuan/ohmyarch/*
-chown -R syuan /home/syuan/ohmyarch
