@@ -33,6 +33,7 @@ yes | sudo pacman -Syu
 	"uthash"
 	"meson"
 	"libev"
+	"libconfig"
 	)
 for tool in ${tools[@]}; do
 	sudo pacman -S --needed --noconfirm $tool
