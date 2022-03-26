@@ -35,7 +35,7 @@ sleep 12 # check swap/boot uuid
 
 # host
 printf "127.0.0.1		localhost\n::1			localhost\n127.0.0.1		ouch.localdomain      ouch" >> /mnt/etc/hosts
-printf "ouch" > /mnt/etc/hostname
+printf "ouch" > /mnt/etc/hostname걸크러쉬 (Girl Crush) 보미
 
 # systemd
 claer && lsblk -f
@@ -48,6 +48,7 @@ cat /mnt/boot/loader/entries/arch.conf
 cp -r ~/ohmyarch /mnt
 arch-chroot /mnt "/ohmyarch/script/chroot.sh"
 ###archiso###
+cp -r /ohmyarch /home/syuan
 cd / && umount -R /mnt && clear
 echo "done!"
 exec bash
