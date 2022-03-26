@@ -40,7 +40,7 @@ xrandr -s 1920x1080
 # AUR
 mkdir ~/library
 echo "AUR" | figlet
-sudo git clone https://aur.archlinux.org/yay.git ~/library
+sudo git clone https://aur.archlinux.org/yay.git ~/library/yay
 cd ~/library/yay && makepkg -si
 
 yay picom-jonaburg-git
