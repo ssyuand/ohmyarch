@@ -20,3 +20,4 @@ echo "enter your passwd syuand:"
 passwd syuan
 usermod -aG wheel,audio,video,optical,storage syuan
 
+chown -R syuan /home/syuan/ohmyarch/*
