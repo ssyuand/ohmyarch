@@ -49,7 +49,7 @@ cp -r ~/ohmyarch /mnt
 arch-chroot /mnt "/ohmyarch/script/chroot.sh"
 ###archiso###
 cp -r ~/ohmyarch /mnt/home/syuan
-sudo chown -R syuan /mnt/home/syuan/ohmyarch/*
+chown -R syuan /mnt/home/syuan/ohmyarch/*
 cd / && umount -R /mnt
 echo "done!"
 reboot
