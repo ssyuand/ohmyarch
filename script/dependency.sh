@@ -27,6 +27,7 @@ yes | sudo pacman -Syu
 	"xorg-xinit"
 	"xorg-xrandr"
 	"xclip"
+	"sxhkd"
 	"libxinerama"
 	"libxft"
 	"feh"
