@@ -4,7 +4,7 @@ install_desktop() {
 #ly
 git clone --recurse-submodules https://github.com/nullgemm/ly.git
 cd ly && sudo make install
-systemctl enable ly
+sudo systemctl enable ly
 
 # .bashrc
 cp ~/ohmyarch/dotfile/.bashrc ~/
