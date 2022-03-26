@@ -2,8 +2,8 @@
 install_desktop() {
 
 #ly
-git clone --recurse-submodules https://github.com/nullgemm/ly.git
-cd ly && sudo make install
+git clone --recurse-submodules https://github.com/nullgemm/ly.git ~/library/ly
+cd ~/library/ly && sudo make install
 sudo systemctl enable ly
 
 # .bashrc
