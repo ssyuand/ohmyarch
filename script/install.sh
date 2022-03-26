@@ -29,9 +29,6 @@ pacstrap /mnt git dhcpcd sudo pacman
 
 # fstab
 genfstab -L /mnt > /mnt/etc/fstab chroot:arch-chroot /mnt
-cat /mnt/etc/fstab
-blkid
-sleep 12 # check swap/boot uuid
 
 # host
 printf "127.0.0.1		localhost\n::1			localhost\n127.0.0.1		ouch.localdomain      ouch" >> /mnt/etc/hosts
