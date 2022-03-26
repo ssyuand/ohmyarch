@@ -38,9 +38,9 @@ xrandr -s 1920x1080
 
 # AUR
 echo "AUR" | figlet
-git clone https://aur.archlinux.org/yay.git
+sudo git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+sudo makepkg -si
 
 yay picom-jonaburg-git
 yay xsetroot
