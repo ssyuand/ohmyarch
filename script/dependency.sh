@@ -30,6 +30,8 @@ yes | sudo pacman -Syu
 	"libxinerama"
 	"libxft"
 	"feh"
+	"uthash"
+	"meson"
 	)
 for tool in ${tools[@]}; do
 	sudo pacman -S --needed --noconfirm $tool
