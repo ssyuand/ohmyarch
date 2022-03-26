@@ -45,7 +45,7 @@ printf "title ouch\nlinux /vmlinuz-linux\ninitrd /initramfs-linux.img\noptions r
 cat /mnt/boot/loader/entries/arch.conf
 
 ###chroot###
-cp -r ~/ohmyarch /mnt/home/syuan
+cp -r ~/ohmyarch /mnt/home/syuan/ohmyarch
 cp -r ~/ohmyarch /mnt
 arch-chroot /mnt "/ohmyarch/script/chroot.sh"
 ###archiso###
