@@ -45,7 +45,6 @@ cat /mnt/boot/loader/entries/arch.conf
 cp -r ~/ohmyarch /mnt
 arch-chroot /mnt "/ohmyarch/script/chroot.sh"
 ###archiso###
-cp -r ~/ohmyarch /mnt/home/syuan
 cd / && umount -R /mnt
 echo "done!"
 reboot
