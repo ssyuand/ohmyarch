@@ -26,6 +26,12 @@ git clone https://git.suckless.org/dwm ~/.config/dwm
 #cp ~/ohmyarch/dotfile/config.h ~/.config/dwm/config.h
 cd ~/.config/dwm && sudo make install
 
+# picom
+git clone https://github.com/jonaburg/picom ~/library/picom
+cd ~/library/picom && meson --buildtype=release . build
+ninja -C build
+sudo ninja -C build install
+
 #feh
 mkdir ~/Desktop
 tar -xvf ~/ohmyarch/dotfile/neon.tar -C ~/Desktop
