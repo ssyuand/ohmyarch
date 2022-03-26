@@ -53,4 +53,3 @@ chown -R syuan /mnt/home/syuan/ohmyarch/*
 cd / && umount -R /mnt
 echo "done!"
 reboot
-exec bash
