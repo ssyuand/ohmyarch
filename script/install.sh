@@ -46,7 +46,7 @@ cat /mnt/boot/loader/entries/arch.conf
 
 ###chroot###
 cp -r ~/ohmyarch /mnt
-arch-chroot /mnt "/ohmyarch/chroot.sh"
+arch-chroot /mnt "/ohmyarch/script/chroot.sh"
 ###archiso###
 cd / && umount -R /mnt && clear
 echo "done!"
