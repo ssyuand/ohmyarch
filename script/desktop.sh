@@ -26,6 +26,10 @@ git clone https://git.suckless.org/dwm ~/.config/dwm
 sudo cp ~/ohmyarch/dotfile/config.h ~/.config/dwm/config.h
 cd ~/.config/dwm && sudo make install
 
+# rofi
+mkdir ~/.local/share/rofi/themes/light.rasi
+mv ~/ohmyarch/dotfile/.config/rofi/light.rasi ~/.local/share/rofi/themes/light.rasi
+
 # picom
 git clone https://github.com/jonaburg/picom ~/library/picom
 cd ~/library/picom && meson --buildtype=release . build
