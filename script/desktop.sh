@@ -23,7 +23,7 @@ cp ~/ohmyarch/dotfile/.xinitrc ~/
 # dwm
 echo "DWM" | figlet
 git clone https://git.suckless.org/dwm ~/.config/dwm
-cp ~/ohmyarch/dotfile/config.h ~/.config/dwm/config.h
+#cp ~/ohmyarch/dotfile/config.h ~/.config/dwm/config.h
 cd ~/.config/dwm && sudo make install
 
 #feh
