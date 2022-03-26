@@ -27,7 +27,7 @@ sudo cp ~/ohmyarch/dotfile/config.h ~/.config/dwm/config.h
 cd ~/.config/dwm && sudo make install
 
 # rofi
-mkdir ~/.local/share/rofi/themes/light.rasi
+mkdir -p ~/.local/share/rofi/themes
 mv ~/ohmyarch/dotfile/.config/rofi/light.rasi ~/.local/share/rofi/themes/light.rasi
 
 # picom
