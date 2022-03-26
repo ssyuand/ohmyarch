@@ -20,5 +20,5 @@ echo "enter your passwd syuand:"
 passwd syuan
 usermod -aG wheel,audio,video,optical,storage syuan
 
-cp -r /ohmyarch /mnt/home/syuan
+cp -r /ohmyarch /home/syuan
 chown -R syuan /home/syuan/ohmyarch/*
