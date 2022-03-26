@@ -23,6 +23,7 @@ yes | sudo pacman -Syu
 	"ranger"
 	"trash-cli"
 	"xorg-server"
+	"xorg-xsetroot"
 	"xorg-xinit"
 	"xorg-xrandr"
 	"xclip"
@@ -43,7 +44,6 @@ cd yay
 makepkg -si
 
 yay picom-jonaburg-git
-yay xsetroot
 
 # fcitx
 printf "export GTK_IM_MODULE=fcitx
