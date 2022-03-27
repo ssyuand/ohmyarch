@@ -1,11 +1,9 @@
-vim.cmd[[
-  augroup Packer_aug
-  autocmd!
-  autocmd BufWritePost plugins.lua PackerCompile
-  autocmd BufWritePost plugins.lua PackerClean
-  autocmd BufWritePost plugins.lua PackerInstall
-  augroup END
-]]
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+]])
 
 return require('packer').startup(function()
 -- Packer can manage itself
