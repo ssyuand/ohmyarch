@@ -20,6 +20,9 @@ sudo cp ~/ohmyarch/dotfile/fonts/* /usr/share/fonts/
 # xinitrc
 cp ~/ohmyarch/dotfile/.xinitrc ~/
 
+# .gitconfig
+cp ~/ohmyarch/dotfile/.gitconfig ~/
+
 # dwm
 echo "DWM" | figlet
 git clone https://git.suckless.org/dwm ~/.config/dwm
