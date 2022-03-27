@@ -4,6 +4,7 @@ declare -A URLS
 
 URLS=(
   ["url"]="https://"
+  ["translate"]="https://translate.google.com.tw/?q="
   ["google"]="https://www.google.com/search?q="
   ["youtube"]="https://www.youtube.com/results?search_query="
   ["github"]="https://github.com/"
