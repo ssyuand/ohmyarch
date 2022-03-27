@@ -26,6 +26,7 @@ yes | sudo pacman -Syu
 	"xorg-xsetroot"
 	"xorg-xinit"
 	"xorg-xrandr"
+	"xorg-setxkbmap"
 	"xclip"
 	"sxhkd"
 	"libxinerama"
