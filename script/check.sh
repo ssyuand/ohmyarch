@@ -1,14 +1,9 @@
 declare -A CHECK_FILES
 CHECK_FILES=(
 	["yay"]="/usr/bin/yay"	
-	["compton"]="/usr/bin/compton"
-	["compton-config"]="$HOME/.config/compton/compton.conf"
 	["fcitx"]="/usr/bin/fcitx"
 	["nvim"]="/usr/bin/nvim"
 	["xinitrc"]="$HOME/.xinitrc"
-	["firefox"]="/usr/bin/firefox"
-	["pulseaudio"]="/usr/bin/pulseaudio"
-	["local_conf"]="/etc/locale.conf"
 	["bashrc"]="$HOME/.bashrc"
 	["alacritty"]="/usr/bin/alacritty"
 )
@@ -16,8 +11,6 @@ CHECK_FILES=(
 declare -A CHECK_DIRS
 CHECK_DIRS=(
 	["dwm"]="$HOME/.config/dwm/"
-	["dmenu"]="$HOME/.config/dmenu/"
-	["wallpaper"]="$HOME/.config/wallpaper"
 )
 function check_file_exist {
      for key in "${!CHECK_FILES[@]}"; do
