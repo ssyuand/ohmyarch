@@ -7,11 +7,11 @@ echo zh_TW.UTF-8 UTF-8 | sudo tee -a /etc/locale.gen
 locale-gen
 
 # wheel ALL=(ALL) ALL
-pacman -Sy vim
+pacman -Sy --noconfirm vim
 visudo
 
 # network
-pacman -Sy networkmanager
+pacman -Sy --noconfirm networkmanager
 systemctl enable NetworkManager
 
 #open root
