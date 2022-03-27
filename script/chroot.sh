@@ -7,8 +7,7 @@ echo zh_TW.UTF-8 UTF-8 | sudo tee -a /etc/locale.gen
 locale-gen
 
 # wheel ALL=(ALL) ALL
-pacman -Sy --noconfirm vim
-visudo
+echo '%Wheel ALL=(ALL:ALL) ALL' | sudo EDITOR='tee -a' visudo
 
 # network
 pacman -Sy --noconfirm networkmanager
