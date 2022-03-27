@@ -1,11 +1,9 @@
 #!/bin/bash
 FILE=/dev/input/by-id/usb-Topre_Corporation_HHKB_Professional-event-kbd
 if [ -L "$FILE" ]; then
-	setxkbmap -option
-	xmodmap ~/ohmyarch/dotfile/xmodmap/.xmodmap-hhkb
+	setxkbmap -layout us -option
 else 
-	setxkbmap -option
-	xmodmap ~/ohmyarch/dotfile/xmodmap/.xmodmap-laptop
+	setxkbmap -layout us -option ctrl:swapcaps
 fi
 
 ~/ohmyarch/script/wallpaper.sh &
