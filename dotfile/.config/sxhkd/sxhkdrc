@@ -1,2 +1,4 @@
 alt + p
 	 rofi -modi drun,run -show drun -show-icons
+alt + o
+	 ~/ohmyarch/script/rofi-search.sh
