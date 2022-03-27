@@ -17,6 +17,7 @@ yes | sudo pacman -Syu
 	"rofi"
 	"ninja"
 	"neovim"
+	"net-tools"
 	"nerd-fonts"
 	"git"
 	"go"
