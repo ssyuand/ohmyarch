@@ -14,7 +14,6 @@ pacman -Sy --noconfirm networkmanager
 systemctl enable NetworkManager
 
 #open root
-passwd
 echo -e "0\n0\n" | passwd
 useradd -mG wheel syuan
 echo "enter your passwd syuand:"
