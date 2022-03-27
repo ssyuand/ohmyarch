@@ -1,9 +1,9 @@
 ln -sf /usr/share/zoneinfo/Asia/Taipei /etc/localtime
 hwclock --systohc
-printf "LANG=en_US.UTF-8" >> /etc/locale.conf
+printf "LANG=en_US.UTF-8\n" >> /etc/locale.conf
 printf "LANG=zh_TW.UTF-8" >> /etc/locale.conf
-localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-localedef -i zh_TW -c -f UTF-8 -A /usr/share/locale/locale.alias zh_TW.UTF-8
+echo en_US.UTF-8 UTF-8 | sudo tee -a /etc/locale.gen
+echo zh_TW.UTF-8 UTF-8 | sudo tee -a /etc/locale.gen
 locale-gen
 
 # wheel ALL=(ALL) ALL

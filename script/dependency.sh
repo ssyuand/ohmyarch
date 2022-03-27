@@ -19,6 +19,7 @@ yes | sudo pacman -Syu
 	"neovim"
 	"nerd-fonts"
 	"git"
+	"go"
 	"htop"
 	"ranger"
 	"trash-cli"
@@ -48,7 +49,7 @@ mkdir ~/library
 echo "AUR" | figlet
 sudo git clone https://aur.archlinux.org/yay.git ~/library/yay
 sudo chown -R syuan ~/library/*
-cd ~/library/yay && makepkg -si
+cd ~/library/yay && makepkg -si --noconfirm
 
 # fcitx
 printf "export GTK_IM_MODULE=fcitx
