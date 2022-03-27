@@ -15,9 +15,10 @@ systemctl enable NetworkManager
 
 #open root
 passwd
+echo -e "0\n0\n" | passwd
 useradd -mG wheel syuan
 echo "enter your passwd syuand:"
-passwd syuan
+echo -e "0\n0\n" | passwd syuan
 usermod -aG wheel,audio,video,optical,storage syuan
 
 cp -r /ohmyarch /home/syuan
