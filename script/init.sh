@@ -31,5 +31,5 @@ else
 	install_desktop
 	install_neovim
 	check_all
-	reboot
+	startx
 fi

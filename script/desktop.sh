@@ -42,7 +42,5 @@ sudo ninja -C build install
 #feh
 mkdir ~/Desktop
 tar -xvf ~/ohmyarch/dotfile/neon.tar -C ~/Desktop
-
-startx
 echo "Desktop environment done!"
 }
