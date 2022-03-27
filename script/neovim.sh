@@ -7,7 +7,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
   /.local/share/nvim/site/pack/packer/start/packer.nvim
 
-timeout 3s nvim -c "PackerSync"
+timeout 10s nvim -c "PackerSync"
 ## lua
 #git clone https://github.com/sumneko/lua-language-server ~/library/lua-language-server
 #cd ~/library/lua-language-server
