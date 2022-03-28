@@ -18,7 +18,6 @@ yes | sudo pacman -S
 	"neovim"
 	"nerd-fonts"
 	"git"
-	"go"
 	"htop"
 	"trash-cli"
 	"xorg-server"
