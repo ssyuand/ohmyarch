@@ -26,6 +26,7 @@ elif [[ $1 == "neovim" ]]; then
 elif [[ $1 == "ls" ]]; then
 	install_ls
 else
+	config_mirror
 	install_dependency
 	install_desktop
 	install_neovim
