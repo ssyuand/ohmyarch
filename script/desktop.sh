@@ -30,8 +30,8 @@ cp ~/ohmyarch/dotfile/.config/rofi/light.rasi ~/.local/share/rofi/themes/light.r
 
 #ly
 git clone --recurse-submodules https://github.com/nullgemm/ly.git ~/library/ly
-cd ~/library/ly && ./configure –prefix=/home/syuan/library/ly && sudo make install
-sudo systemctl enable /home/syuan/library/ly/bin/ly
+cd ~/library/ly && sudo make install
+sudo systemctl enable ly
 
 # picom
 git clone https://github.com/jonaburg/picom ~/library/picom
