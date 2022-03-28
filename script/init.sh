@@ -17,7 +17,6 @@ config_mirror () {
 }
 
 # config all shit
-mkdir ~/.config
 if [[ $1 == "dependency" ]]; then
 	install_dependency
 elif [[ $1 == "desktop" ]]; then
