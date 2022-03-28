@@ -32,6 +32,7 @@ yes | sudo pacman -Syu
 	"libxft"
 	"feh"
 	"uthash"
+	"wget"
 	"meson"
 	"libev"
 	"libconfig"

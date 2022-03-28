@@ -23,6 +23,6 @@ cd ../..
 yay -Sy jdk-openjdk
 mkdir ~/library/java
 cd ~/library/java
-links https://download.eclipse.org/jdtls/milestones/1.7.0/
+wget https://download.eclipse.org/jdtls/milestones/1.7.0/jdt-language-server-1.7.0-202112161541.tar.gz
 tar -xvzf *.tar.gz
 }
