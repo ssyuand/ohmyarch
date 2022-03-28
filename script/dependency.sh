@@ -4,8 +4,6 @@ echo "dependency" | figlet
 yes | sudo pacman -S
 	tools=(
 	"alacritty"
-	"alsemixer"
-	"alsa-utils"
 	"base-devel"
 	"ttf-droid"
 	"figlet"
