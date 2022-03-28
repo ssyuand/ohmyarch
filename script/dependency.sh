@@ -8,7 +8,6 @@ yes | sudo pacman -S
 	"chromium"
 	"ttf-droid"
 	"figlet"
-	"firefox"
 	"fcitx-im"
 	"fcitx-configtool"
 	"fcitx-chewing"
