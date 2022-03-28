@@ -5,6 +5,7 @@ yes | sudo pacman -S
 	tools=(
 	"alacritty"
 	"base-devel"
+	"chromium"
 	"ttf-droid"
 	"figlet"
 	"firefox"
