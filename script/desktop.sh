@@ -1,11 +1,6 @@
 #!/bin/bash
 install_desktop() {
 
-#ly
-git clone --recurse-submodules https://github.com/nullgemm/ly.git ~/library/ly
-cd ~/library/ly && sudo make install
-sudo systemctl enable ly
-
 # .bashrc
 cp ~/ohmyarch/dotfile/.bashrc ~/
 sudo cp ~/ohmyarch/dotfile/.bashrc /root
@@ -26,12 +21,17 @@ cp ~/ohmyarch/dotfile/.gitconfig ~/
 # dwm
 echo "DWM" | figlet
 git clone https://git.suckless.org/dwm ~/.config/dwm
-sudo cp ~/ohmyarch/dotfile/config.h ~/.config/dwm/config.h
+cp ~/ohmyarch/dotfile/config.h ~/.config/dwm/config.h
 cd ~/.config/dwm && sudo make install
 
 # rofi
 mkdir -p ~/.local/share/rofi/themes
 cp ~/ohmyarch/dotfile/.config/rofi/light.rasi ~/.local/share/rofi/themes/light.rasi
+
+#ly
+git clone --recurse-submodules https://github.com/nullgemm/ly.git ~/library/ly
+cd ~/library/ly && ./configure –prefix=/home/syuan/library/ly && sudo make install
+sudo systemctl enable /home/syuan/library/ly/bin/ly
 
 # picom
 git clone https://github.com/jonaburg/picom ~/library/picom

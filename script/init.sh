@@ -1,11 +1,11 @@
 #!/bin/bash
 sudo chown -R syuan /home/syuan/ohmyarch
 sudo chmod u+x /home/syuan/ohmyarch
+
 DIR=$(pwd)
 . "$DIR/dependency.sh"
 . "$DIR/desktop.sh"
 . "$DIR/neovim.sh"
-. "$DIR/check.sh"
 
 config_mirror () {
     PACMAN_MIRROR=$(cat /etc/pacman.d/mirrorlist)
@@ -18,18 +18,17 @@ config_mirror () {
 
 # config all shit
 mkdir ~/.config
-if [[ $1 == "check" ]]; then
-	check_all
-elif [[ $1 == "dependency" ]]; then
+if [[ $1 == "dependency" ]]; then
 	install_dependency
 elif [[ $1 == "desktop" ]]; then
 	install_desktop
 elif [[ $1 == "neovim" ]]; then
 	install_neovim
+elif [[ $1 == "ls" ]]; then
+	install_ls
 else
 	install_dependency
 	install_desktop
 	install_neovim
-	check_all
 	startx
 fi
