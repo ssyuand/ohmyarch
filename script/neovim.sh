@@ -2,9 +2,9 @@
 install_neovim() {
 echo "neovim" | figlet
 # packer
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+sudo git clone --depth 1 https://github.com/wbthomason/packer.nvim\
   ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+sudo git clone --depth 1 https://github.com/wbthomason/packer.nvim\
   /.local/share/nvim/site/pack/packer/start/packer.nvim
 
 timeout 10s nvim -c "PackerSync"
