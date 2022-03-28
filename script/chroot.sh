@@ -10,7 +10,7 @@ locale-gen
 echo '%Wheel ALL=(ALL:ALL) ALL' | sudo EDITOR='tee -a' visudo
 
 # network
-pacman -Sy --noconfirm networkmanager
+pacman -S --noconfirm networkmanager
 systemctl enable NetworkManager
 
 #open rootwq

@@ -10,7 +10,6 @@ DIR=$(pwd)
 config_mirror () {
     PACMAN_MIRROR=$(cat /etc/pacman.d/mirrorlist)
     if [[ $PACMAN_MIRROR != *"nctu"* ]]; then
-        sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
         sudo echo 'Server = https://archlinux.cs.nctu.edu.tw/$repo/os/$arch' > /etc/pacman.d/mirrorlist
     fi
 	sudo pacman -Sy
