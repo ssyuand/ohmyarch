@@ -7,7 +7,6 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 sudo git clone --depth 1 https://github.com/wbthomason/packer.nvim\
   /.local/share/nvim/site/pack/packer/start/packer.nvim
 
-timeout 10s nvim -u NONE -c "PackerSync"
 }
 
 install_ls(){
