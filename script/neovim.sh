@@ -11,8 +11,7 @@ sudo git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 install_ls(){
 # lua
-sudo git clone https://github.com/sumneko/lua-language-server 
- ~/library/lua-language-server#cd ~/library/lua-language-server
+sudo git clone https://github.com/sumneko/lua-language-server ~/library/lua-language-server#cd ~/library/lua-language-server
 sudo git submodule update --init --recursive
 cd 3rd/luamake
 ./compile/install.sh
