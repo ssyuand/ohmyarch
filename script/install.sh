@@ -25,7 +25,7 @@ printf "Server = http://archlinux.ccns.ncku.edu.tw/archlinux/\$repo/os/\$arch" >
 
 # install linux
 pacstrap /mnt base linux linux-firmware intel-ucode
-pacstrap /mnt git dhcpcd sudo pacman
+pacstrap /mnt git dhcpcd sudo pacman trash-cli
 
 # fstab
 genfstab -L /mnt > /mnt/etc/fstab chroot:arch-chroot /mnt

@@ -4,7 +4,7 @@ echo "dependency" | figlet
 yes | sudo pacman -S
 	tools=(
 	"alacritty"
-	"make"
+	"base-devel"
 	"ttf-droid"
 	"figlet"
 	"firefox"
