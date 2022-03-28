@@ -3,7 +3,7 @@ hwclock --systohc
 printf "LANG=zh_TW.UTF-8" >> /etc/locale.conf
 printf "LANG=en_US.UTF-8\n" >> /etc/locale.conf
 echo zh_TW.UTF-8 UTF-8 | sudo tee -a /etc/locale.gen
-echo en_US.UTF-8 UTF-8 | sudo tee -a /etcq/locale.gen
+echo en_US.UTF-8 UTF-8 | sudo tee -a /etc/locale.gen
 locale-gen
 
 # wheel ALL=(ALL) ALL

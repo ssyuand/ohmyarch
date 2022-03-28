@@ -1,7 +1,7 @@
 #!/bin/bash
 install_dependency() {
 echo "dependency" | figlet
-yes | sudo pacman -Syu
+yes | sudo pacman -S
 	tools=(
 	"alacritty"
 	"base-devel"
