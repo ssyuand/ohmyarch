@@ -18,7 +18,6 @@ yes | sudo pacman -Syu
 	"net-tools"
 	"nerd-fonts"
 	"git"
-	"go"
 	"htop"
 	"ranger"
 	"trash-cli"
