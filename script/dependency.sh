@@ -17,8 +17,6 @@ yes | sudo pacman -S
 	"net-tools"
 	"nerd-fonts"
 	"git"
-	"htop"
-	"ranger"
 	"trash-cli"
 	"xorg-server"
 	"xorg-xsetroot"
