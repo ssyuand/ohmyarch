@@ -3,7 +3,7 @@ hwclock --systohc
 printf "LANG=zh_TW.UTF-8" >> /etc/locale.conf
 printf "LANG=en_US.UTF-8\n" >> /etc/locale.conf
 echo zh_TW.UTF-8 UTF-8 | sudo tee -a /etc/locale.gen
-echo en_US.UTF-8 UTF-8 | sudo tee -a /etc/locale.gen
+echo en_US.UTF-8 UTF-8 | sudo tee -a /etcq/locale.gen
 locale-gen
 
 # wheel ALL=(ALL) ALL
@@ -13,7 +13,7 @@ echo '%Wheel ALL=(ALL:ALL) ALL' | sudo EDITOR='tee -a' visudo
 pacman -Sy --noconfirm networkmanager
 systemctl enable NetworkManager
 
-#open root
+#open rootwq
 echo -e "0\n0\n" | passwd
 useradd -mG wheel syuan
 echo "enter your passwd syuand:"
