@@ -7,7 +7,6 @@ yes | sudo pacman -S
 	"base-devel"
 	"ttf-droid"
 	"figlet"
-	"clang"
 	"firefox"
 	"fcitx-im"
 	"fcitx-configtool"
