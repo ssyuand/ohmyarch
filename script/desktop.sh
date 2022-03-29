@@ -24,6 +24,12 @@ git clone https://git.suckless.org/dwm ~/.config/dwm
 cp ~/ohmyarch/dotfile/config.h ~/.config/dwm/config.h
 cd ~/.config/dwm && sudo make install
 
+# picom
+git clone https://github.com/jonaburg/picom ~/library/picom
+cd ~/library/picom && meson --buildtype=release . build
+ninja -C build
+sudo ninja -C build install
+
 # rofi
 mkdir -p ~/.local/share/rofi/themes
 cp ~/ohmyarch/dotfile/.config/rofi/light.rasi ~/.local/share/rofi/themes/light.rasi
@@ -32,12 +38,6 @@ cp ~/ohmyarch/dotfile/.config/rofi/light.rasi ~/.local/share/rofi/themes/light.r
 git clone --recurse-submodules https://github.com/nullgemm/ly.git ~/library/ly
 cd ~/library/ly && sudo make install
 sudo systemctl enable ly
-
-# picom
-git clone https://github.com/jonaburg/picom ~/library/picom
-cd ~/library/picom && meson --buildtype=release . build
-ninja -C build
-sudo ninja -C build install
 
 #feh
 mkdir ~/Desktop
