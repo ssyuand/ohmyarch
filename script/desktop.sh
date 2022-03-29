@@ -27,7 +27,6 @@ cd ~/.config/dwm && sudo make install
 # picom
 git clone https://github.com/jonaburg/picom ~/library/picom
 cd ~/library/picom && meson --buildtype=release . build
-ninja -C build
 sudo ninja -C build install
 
 # rofi
