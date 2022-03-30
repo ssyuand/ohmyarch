@@ -64,10 +64,10 @@ colors:
 
   cursor:
     text: '#011627'
-    cursor: '#d6deeb'
+    cursor: '#FFC0CB'
 
   selection:
-    background: '#1b90dd'
+    background: '#FFC0CB'
 
    # Normal colors
   normal:
