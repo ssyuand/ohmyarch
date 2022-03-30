@@ -7,10 +7,10 @@ local colors = {
   yellow = '#ECBE7B',
   cyan = '#008080',
   darkblue = '#081633',
-  green = '#98be65',
+  green = '#22AFFF',
   orange = '#FF8800',
   violet = '#a9a1e1',
-  magenta = '#c678dd',
+  magenta = '#75d5fd',
   blue = '#011627',
   red = '#ec5f67'
 }
@@ -77,6 +77,7 @@ ins_right('location')
 
 ins_right {
   -- filesize component
+	icon = 'כֿ',
   function()
     local function format_file_size(file)
       local size = vim.fn.getfsize(file)
@@ -93,20 +94,21 @@ ins_right {
     if string.len(file) == 0 then return '' end
     return format_file_size(file)
   end,
-  condition = conditions.buffer_not_empty
+  condition = conditions.buffer_not_empty,
+  color = {fg = '#13ca91', gui = 'bold'}
 }
-
 ins_left {
   'filename',
+	icon = '',
   condition = conditions.buffer_not_empty,
-  color = {fg = colors.magenta, gui = 'bold'}
+  color = {fg = 'A5D8F3', gui = 'bold'}
 }
 
 ins_right {
   'branch',
-  icon = ' ',
+  icon = '',
   condition = conditions.check_git_workspace,
-  color = {fg = colors.cyan, gui = 'bold'}
+  color = {fg = '#9d72ff', gui = 'bold'}
 }
 
 -- Insert mid section. You can make any number of sections in neovim :)
@@ -129,7 +131,7 @@ ins_left {
     end
     return msg
   end,
-  color = {bg = colors.gg, fg = '#ffffff', gui = 'italic'}
+  color = {bg = colors.gg, fg = '#FFC0CB', gui = 'italic'}
 }
 
 
@@ -138,6 +140,7 @@ ins_right {
   color = {fg = colors.bg,bg = colors.bg},
   right_padding = 0
 }
+
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)

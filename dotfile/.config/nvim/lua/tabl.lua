@@ -7,6 +7,7 @@ require("bufferline").setup{
 		 diagnostics_update_in_insert = false,
 		 show_tab_indicators = true,
 		 always_show_bufferline = false;
+		debug
 
 	}
 }
