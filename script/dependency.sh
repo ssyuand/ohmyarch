@@ -4,8 +4,8 @@ yes | sudo pacman -S
 	tools=(
 	"alacritty"
 	"ttf-droid"
-	"figlet"
 	"firefox"
+	"figlet"
 	"fcitx-im"
 	"fcitx-configtool"
 	"fcitx-chewing"
