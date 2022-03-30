@@ -22,7 +22,7 @@ elif [[ $1 == "desktop" ]]; then
 	install_desktop
 elif [[ $1 == "neovim" ]]; then
 	install_neovim
-elif [[ $1 == "ls" ]]; then
+elif [[ $1 == "lsp" ]]; then
 	install_ls
 else
 	config_mirror
