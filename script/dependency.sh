@@ -26,6 +26,7 @@ yes | sudo pacman -S
 	"libxinerama"
 	"libxft"
 	"feh"
+	"wget"
 	"uthash"
 	"meson"
 	"libev"

@@ -20,7 +20,7 @@ cd ../..
 ./3rd/luamake/luamake rebuild
 
 # java
-yay -Sy jdk-openjdk
+sudo pacman -Sy jdk-openjdk --noconfirm
 mkdir ~/library/java
 cd ~/library/java
 wget https://download.eclipse.org/jdtls/milestones/1.7.0/jdt-language-server-1.7.0-202112161541.tar.gz
