@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 declare -A URLS
 
 URLS=(
