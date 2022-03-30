@@ -35,7 +35,7 @@ scrolling:
   multiplier: 3
 cursor:
   # Cursor style
-  style: Underline
+  style:  Underline
   # If this is `true`, the cursor will be rendered as a hollow box when the
   unfocused_hollow: true
     #shell:
