@@ -73,11 +73,16 @@ ins_left {
   left_padding = 0 -- We don't need space before this
 }
 
-ins_right('location')
 
 ins_right {
+  'branch',
+  icon = '',
+  condition = conditions.check_git_workspace,
+  color = {fg = '#9d72ff', gui = 'bold'}
+}
+ins_right {
   -- filesize component
-	icon = 'כֿ',
+	icon = '',
   function()
     local function format_file_size(file)
       local size = vim.fn.getfsize(file)
@@ -99,17 +104,12 @@ ins_right {
 }
 ins_left {
   'filename',
-	icon = '',
+	icon = '',
   condition = conditions.buffer_not_empty,
   color = {fg = 'A5D8F3', gui = 'bold'}
 }
+--ins_left('location')
 
-ins_right {
-  'branch',
-  icon = '',
-  condition = conditions.check_git_workspace,
-  color = {fg = '#9d72ff', gui = 'bold'}
-}
 
 -- Insert mid section. You can make any number of sections in neovim :)
 -- for lualine it's any number greater then 2
@@ -144,4 +144,3 @@ ins_right {
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
-
