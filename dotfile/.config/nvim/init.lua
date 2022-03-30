@@ -6,5 +6,3 @@ require('telecrope')
 require('treesitter')
 require('lline')
 require('tabl')
-
-
