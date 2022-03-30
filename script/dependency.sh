@@ -1,6 +1,5 @@
 #!/bin/bash
 install_dependency() {
-echo "dependency" | figlet
 yes | sudo pacman -S
 	tools=(
 	"alacritty"
