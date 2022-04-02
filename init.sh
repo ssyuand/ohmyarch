@@ -24,6 +24,8 @@ elif [[ $1 == "neovim" ]]; then
 	install_neovim
 elif [[ $1 == "lsp" ]]; then
 	install_ls
+elif [[ $1 == "wireless" ]]; then
+	install_wireless
 else
 	config_mirror
 	install_dependency

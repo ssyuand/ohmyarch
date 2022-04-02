@@ -42,3 +42,6 @@ mkdir ~/Desktop
 tar -xvf ~/ohmyarch/dotfile/neon.tar -C ~/Desktop
 echo "Desktop environment done!"
 }
+install_wireless() {
+	sudo pacman -Sy bluez bluez-utils --noconfirm
+}
