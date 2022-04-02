@@ -2,22 +2,40 @@
 ping -c 3 google.com
 timedatectl set-ntp true
 timedatectl status
-cfdisk /dev/sda
+cfdisk /dev/nvme0n1
 
-# format
-mkfs.vfat /dev/sda1
-swapoff /dev/sda2
-mkswap /dev/sda2
-swapon /dev/sda2
-y|mkfs.ext4 /dev/sda3
-y|mkfs.ext4 /dev/sda4
+if [[ $1 == "nvme" ]]; then
+	# format
+	mkfs.vfat /dev/nvme0n1p1
+	swapoff /dev/nvme0n1p2
+	mkswap /dev/nvme0n1p2
+	swapon /dev/nvme0n1p2
+	y|mkfs.ext4 /dev/nvme0n1p3
+	y|mkfs.ext4 /dev/nvme0n1p4
+	
+	# mount
+	mount /dev/nvme0n1p3 /mnt
+	mkdir /mnt/boot /mnt/home
+	mount /dev/nvme0n1p1 /mnt/boot
+	mount /dev/nvme0n1p4 /mnt/home
+	clear && lsblk -f
+elif [[ $1 == "sda" ]]; then
+	# format
+	mkfs.vfat /dev/sda1
+	swapoff /dev/sda2
+	mkswap /dev/sda2
+	swapon /dev/sda2
+	y|mkfs.ext4 /dev/sda3
+	y|mkfs.ext4 /dev/sda4
+	
+	# mount
+	mount /dev/sda3 /mnt
+	mkdir /mnt/boot /mnt/home
+	mount /dev/sda1 /mnt/boot
+	mount /dev/sda4 /mnt/home
+	clear && lsblk -f
+fi
 
-# mount
-mount /dev/sda3 /mnt
-mkdir /mnt/boot /mnt/home
-mount /dev/sda1 /mnt/boot
-mount /dev/sda4 /mnt/home
-clear && lsblk -f
 
 # mirrorlist
 printf "Server = http://archlinux.cs.nctu.edu.tw/\$repo/os/\$arch\n" > /etc/pacman.d/mirrorlist
@@ -38,7 +56,7 @@ printf "ouch" > /mnt/etc/hostname
 claer && lsblk -f
 bootctl install --esp-path /mnt/boot
 printf "default arch\ntimeout 0" > /mnt/boot/loader/loader.conf
-printf "title ouch\nlinux /vmlinuz-linux\ninitrd /initramfs-linux.img\noptions root=/dev/sda3" > /mnt/boot/loader/entries/arch.conf
+printf "title ouch\nlinux /vmlinuz-linux\ninitrd /initramfs-linux.img\noptions root=/dev/nvme0n1p3" > /mnt/boot/loader/entries/arch.conf
 cat /mnt/boot/loader/entries/arch.conf
 
 ###chroot###
