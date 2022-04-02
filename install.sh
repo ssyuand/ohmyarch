@@ -19,7 +19,7 @@ cfdisk /dev/nvme0n1
 	mount /dev/nvme0n1p1 /mnt/boot
 	mount /dev/nvme0n1p4 /mnt/home
 	clear && lsblk -f
-elif [[ $1 == "sda" ]]; then
+elif [[ $1 == "sata" ]]; then
 cfdisk /dev/sda
 	# format
 	mkfs.vfat /dev/sda1
@@ -59,7 +59,11 @@ printf "ouch" > /mnt/etc/hostname
 claer && lsblk -f
 bootctl install --esp-path /mnt/boot
 printf "default arch\ntimeout 0" > /mnt/boot/loader/loader.conf
+if [[ $1 == "nvme" ]]; then
 printf "title ouch\nlinux /vmlinuz-linux\ninitrd /initramfs-linux.img\noptions root=/dev/nvme0n1p3" > /mnt/boot/loader/entries/arch.conf
+elif [[ $1 == "sata" ]]; then
+printf "title ouch\nlinux /vmlinuz-linux\ninitrd /initramfs-linux.img\noptions root=/dev/sda3" > /mnt/boot/loader/entries/arch.conf
+fi
 cat /mnt/boot/loader/entries/arch.conf
 
 ###chroot###

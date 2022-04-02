@@ -13,6 +13,10 @@ fi
 ~/ohmyarch/script/wallpaper.sh &
 ~/ohmyarch/script/statusbar.sh &
 picom --experimental-backends -b
+
+#typing speed
+xset r rate 166 50
+
 exec fcitx &
 exec sxhkd &
 exec dwm
