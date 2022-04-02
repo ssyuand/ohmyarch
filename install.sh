@@ -2,9 +2,9 @@
 ping -c 3 google.com
 timedatectl set-ntp true
 timedatectl status
-cfdisk /dev/nvme0n1
 
 if [[ $1 == "nvme" ]]; then
+cfdisk /dev/nvme0n1
 	# format
 	mkfs.vfat /dev/nvme0n1p1
 	swapoff /dev/nvme0n1p2
@@ -20,6 +20,7 @@ if [[ $1 == "nvme" ]]; then
 	mount /dev/nvme0n1p4 /mnt/home
 	clear && lsblk -f
 elif [[ $1 == "sda" ]]; then
+cfdisk /dev/sda
 	# format
 	mkfs.vfat /dev/sda1
 	swapoff /dev/sda2
@@ -34,6 +35,8 @@ elif [[ $1 == "sda" ]]; then
 	mount /dev/sda1 /mnt/boot
 	mount /dev/sda4 /mnt/home
 	clear && lsblk -f
+else
+	exec bash
 fi
 
 
