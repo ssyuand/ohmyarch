@@ -14,8 +14,11 @@ fi
 ~/ohmyarch/script/statusbar.sh &
 picom --experimental-backends -b
 
-#typing speed
+# typing speed
 xset r rate 166 50
+
+# brightness minimum
+brillo -c -S 5
 
 exec fcitx &
 exec sxhkd &

@@ -27,7 +27,6 @@ cd ~/library/dwm && sudo make install
 # brightness
 git clone https://gitlab.com/cameronnemo/brillo ~/library/brillo
 cd ~/library/brillo && make && sudo make install.setgid
-brillo -c -S 5
 
 # picom
 git clone https://github.com/jonaburg/picom ~/library/picom
