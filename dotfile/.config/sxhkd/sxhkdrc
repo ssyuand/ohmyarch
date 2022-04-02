@@ -1,4 +1,8 @@
 alt + p
-	 rofi -modi drun,run -show drun -show-icons
+	rofi -modi drun,run -show drun -show-icons
 alt + o
-	 ~/ohmyarch/script/rofi-search.sh
+	~/ohmyarch/script/rofi-search.sh
+alt + shift + k
+	brillo -q -A 1
+alt + shift + j
+	brillo -q -U 1

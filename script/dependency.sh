@@ -31,6 +31,7 @@ yes | sudo pacman -S
 	"meson"
 	"libev"
 	"libconfig"
+	"sof-firmware"
 	)
 for tool in ${tools[@]}; do
 	sudo pacman -S --needed --noconfirm $tool
