@@ -1,4 +1,5 @@
 #!/bin/bash
+printf "[options]\nColor" >> | tee -a /etc/pacman.conf
 ping -c 3 google.com
 timedatectl set-ntp true
 timedatectl status
@@ -45,7 +46,7 @@ printf "Server = http://archlinux.cs.nctu.edu.tw/\$repo/os/\$arch\n" > /etc/pacm
 printf "Server = http://archlinux.ccns.ncku.edu.tw/archlinux/\$repo/os/\$arch" >> /etc/pacman.d/mirrorlist
 
 # install linux
-pacstrap /mnt base linux linux-firmware intel-ucode
+pacstrap /mnt base linux linux-firmware sof-firmware intel-ucode
 pacstrap /mnt git base-devel dhcpcd sudo pacman
 
 # fstab
