@@ -1,5 +1,6 @@
 #!/bin/bash
 install_desktop() {
+
 # .bashrc
 cp ~/ohmyarch/dotfile/.bashrc ~/
 sudo cp ~/ohmyarch/dotfile/.bashrc /root
@@ -23,6 +24,11 @@ git clone https://git.suckless.org/dwm ~/library/dwm
 cp ~/ohmyarch/dotfile/config.h ~/library/dwm/config.h
 cd ~/library/dwm && sudo make install
 
+# brightness
+git clone https://gitlab.com/cameronnemo/brillo ~/library/brillo
+cd ~/library/brillo && make && sudo make install.setgid
+brillo -c -S 5
+
 # picom
 git clone https://github.com/jonaburg/picom ~/library/picom
 cd ~/library/picom && meson --buildtype=release . build
@@ -41,6 +47,9 @@ sudo systemctl enable ly
 mkdir ~/Desktop
 tar -xvf ~/ohmyarch/dotfile/neon.tar -C ~/Desktop
 echo "Desktop environment done!"
+
+# touchpad
+sudo cp ~/ohmyarch/dotfile/30-touchpad.conf /etc/X11/xorg.conf.d/
 }
 install_wireless() {
 	sudo pacman -Sy bluez bluez-utils --noconfirm
