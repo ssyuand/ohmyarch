@@ -7,7 +7,6 @@ require("bufferline").setup{
 		 diagnostics_update_in_insert = false,
 		 show_tab_indicators = true,
 		 always_show_bufferline = false;
-		debug
 
 	}
 }
@@ -15,5 +14,6 @@ local key_map = function(mode, key, result)
   vim.api.nvim_set_keymap(mode, key, result, {noremap = true, silent = true})
 end
 key_map('n','<TAB>','<cmd>BufferLineCycleNext<CR>')
-key_map('n','<S-TAB>','<cmd>BufferLineCyclePrev<CR>')
+key_map('n','<s-tab>','<cmd>bufferlinecycleprev<cr>')
+key_map('n','<C-w>','<cmd>bd!<cr>')
 --key_map('n', '', '<cmd>BufferLineCyclePrev<CR>')

@@ -46,8 +46,7 @@ vim.cmd([[set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾]]);
 vim.cmd([[:highlight SignColumn guibg=NONE guifg=#011627]])
 --signColumn number
 vim.cmd([[:highlight LineNr guifg=#011627 ]])
-vim.cmd([[:highlight CursorLineNr guibg=NONE guifg=#FFC0CB]])
 --Mark
-vim.cmd([[hi Visual guibg=NONE guifg=#FFC0CB]])
+vim.cmd([[hi Visual guibg=NONE guifg=#941e43]])
 --CursorLine
 vim.cmd([[hi CursorLine  guibg=NONE guifg=NONE]]);
