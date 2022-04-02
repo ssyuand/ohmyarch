@@ -31,5 +31,5 @@ else
 	install_dependency
 	install_desktop
 	install_neovim
-	startx
+	reboot
 fi

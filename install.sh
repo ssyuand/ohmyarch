@@ -73,4 +73,3 @@ arch-chroot /mnt "/ohmyarch/script/chroot.sh"
 ###archiso###
 cd / && umount -R /mnt
 echo "done!"
-reboot
