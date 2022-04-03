@@ -1,5 +1,5 @@
 #!/bin/bash
-printf "[options]\nColor" >> | tee -a /etc/pacman.conf
+printf "[options]\nColor" | tee -a /etc/pacman.conf
 ping -c 3 google.com
 timedatectl set-ntp true
 timedatectl status
