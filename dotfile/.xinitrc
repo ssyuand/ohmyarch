@@ -20,6 +20,7 @@ xset r rate 166 50
 # brightness minimum
 brillo -c -S 5
 
+/usr/bin/pactl load-module module-bluetooth-discover
 exec fcitx &
 exec sxhkd &
 exec dwm

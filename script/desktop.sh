@@ -55,5 +55,4 @@ install_wireless() {
 	sudo pacman -Sy bluez bluez-utils pulseaudio-bluetooth pavucontrol sbc --noconfirm
 	sudo systemctl enable bluetooth
 	sudo rfkill unblock all
-	#pactl load-module module-bluetooth-discover
 }
