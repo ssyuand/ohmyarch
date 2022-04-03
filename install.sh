@@ -37,6 +37,7 @@ cfdisk /dev/sda
 	mount /dev/sda4 /mnt/home
 	clear && lsblk -f
 else
+	pkill install.sh
 	exec bash
 fi
 

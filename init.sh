@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo printf "[options]\nColor" | sudo tee -a /etc/pacman.conf
+sudo printf "\n[options]\nColor" | sudo tee -a /etc/pacman.conf
 sudo chown -R syuan /home/syuan/ohmyarch
 sudo chmod u+x /home/syuan/ohmyarch
 
