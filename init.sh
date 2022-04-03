@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo printf "[options]\nColor" | sudo tee -a /etc/pacman.conf
 sudo chown -R syuan /home/syuan/ohmyarch
 sudo chmod u+x /home/syuan/ohmyarch
 
@@ -31,5 +32,4 @@ else
 	install_dependency
 	install_desktop
 	install_neovim
-	sudo reboot
 fi

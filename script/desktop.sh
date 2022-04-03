@@ -52,8 +52,8 @@ echo "Desktop environment done!"
 sudo cp ~/ohmyarch/dotfile/30-touchpad.conf /etc/X11/xorg.conf.d/
 }
 install_wireless() {
-	sudo pacman -Sy bluez bluez-utils pulseaudio-bluetooth pavucontrol --noconfirm
+	sudo pacman -Sy bluez bluez-utils pulseaudio-bluetooth pavucontrol sbc --noconfirm
 	sudo systemctl enable bluetooth
 	sudo rfkill unblock all
-	pactl load-module module-bluetooth-discover
+	#pactl load-module module-bluetooth-discover
 }

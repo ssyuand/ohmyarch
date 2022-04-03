@@ -20,6 +20,7 @@ xset r rate 166 50
 # brightness minimum
 brillo -c -S 5
 
+exec pulseaudio &
 exec fcitx &
 exec sxhkd &
 exec dwm
