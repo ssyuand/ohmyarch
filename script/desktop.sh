@@ -22,9 +22,12 @@ cp ~/ohmyarch/dotfile/.gitconfig ~/
 echo "DWM" | figlet
 git clone https://git.suckless.org/dwm ~/library/dwm
 cp ~/ohmyarch/dotfile/config.h ~/library/dwm/config.h
-cp ~/ohmyarch/dotfile/fibonacci.diff ~/library/dwm
+cp ~/ohmyarch/dotfile/patch/*.diff ~/library/dwm
 cd ~/library/dwm 
 patch -p1 < fibonacci.diff
+patch -p1 < swallow.diff
+patch -p1 < fullgaps.diff
+patch -p1 < pertag.diff
 sudo make install
 
 # brightness
