@@ -28,6 +28,7 @@ patch -p1 < fibonacci.diff
 patch -p1 < swallow.diff
 patch -p1 < fullgaps.diff
 patch -p1 < pertag.diff
+patch -p1 < fackfullscreen.diff
 sudo make install
 
 # brightness

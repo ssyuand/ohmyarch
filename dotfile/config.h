@@ -39,8 +39,8 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
-static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
+static const int lockfullscreen = 0; /* 1 will force focus on the fullscreen window */
 
 #include "fibonacci.c"
 static const Layout layouts[] = {
@@ -91,6 +91,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
+	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
