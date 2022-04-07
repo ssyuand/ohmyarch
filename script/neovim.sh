@@ -10,6 +10,9 @@ sudo git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 }
 
 install_ls(){
+# ripgrep
+sudo pacman -Sy ripgrep --noconfirm
+
 # c/cpp
 sudo pacman -Sy clang --noconfirm
 

@@ -14,6 +14,6 @@ local key_map = function(mode, key, result)
   vim.api.nvim_set_keymap(mode, key, result, {noremap = true, silent = true})
 end
 key_map('n','<TAB>','<cmd>BufferLineCycleNext<CR>')
-key_map('n','<s-tab>','<cmd>bufferlinecycleprev<cr>')
+key_map('n','<s-tab>','<cmd>BufferLineCyclePrev<cr>')
 key_map('n','<C-w>','<cmd>bd!<cr>')
 --key_map('n', '', '<cmd>BufferLineCyclePrev<CR>')
