@@ -67,4 +67,7 @@ install_wireless() {
 	sudo pacman -Sy bluez bluez-utils pulseaudio-bluetooth pavucontrol sbc --noconfirm
 	sudo systemctl enable bluetooth
 	sudo rfkill unblock all
+	sudo pacman -Sy iwd --noconfirm
+	sudo printf "[General]\nEnableNetworkConfiguration=true" | tee -a /etc/iwd/main.conf
+
 }
