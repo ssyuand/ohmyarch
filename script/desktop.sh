@@ -58,6 +58,10 @@ echo "Desktop environment done!"
 
 # touchpad
 sudo cp ~/ohmyarch/dotfile/30-touchpad.conf /etc/X11/xorg.conf.d/
+
+# set default
+xdg-settings set default-web-browser firefox.desktop
+
 }
 install_wireless() {
 	sudo pacman -Sy bluez bluez-utils pulseaudio-bluetooth pavucontrol sbc --noconfirm
