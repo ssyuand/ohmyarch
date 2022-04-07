@@ -68,6 +68,7 @@ install_wireless() {
 	sudo systemctl enable bluetooth
 	sudo rfkill unblock all
 	sudo pacman -Sy iwd --noconfirm
+	sudo systemctl enable iwd 
 	sudo printf "[General]\nEnableNetworkConfiguration=true" | tee -a /etc/iwd/main.conf
 
 }
