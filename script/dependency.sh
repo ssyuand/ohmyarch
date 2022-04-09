@@ -45,6 +45,7 @@ export XMODIFIERS=@im=fcitx
 git clone https://github.com/catppuccin/fcitx5.git ~/library/fcitx5
 mkdir -p ~/.local/share/fcitx5/themes/
 cp -r ~/library/fcitx5/Catppuccin ~/.local/share/fcitx5/themes
+fcitx5 &
 echo "Theme=Catppuccin" > ~/.config/fcitx5/conf/classicui.conf
 }
 
