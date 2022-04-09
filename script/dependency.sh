@@ -42,6 +42,10 @@ printf "export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 " > ~/.xprofile
+git clone https://github.com/catppuccin/fcitx5.git # or with SSH
+mkdir -p ~/.local/share/fcitx5/themes/
+cp -r ./fcitx5/Catppuccin ~/.local/share/fcitx5/themes
+echo "Theme=Catppuccin" > ~/.config/fcitx5/conf/classicui.conf
 }
 
 aur() {
