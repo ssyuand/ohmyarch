@@ -65,6 +65,7 @@ xdg-settings set default-web-browser firefox.desktop
 }
 install_wireless() {
 	sudo pacman -Sy bluez bluez-utils pulseaudio-bluetooth pavucontrol sbc --noconfirm
+	alsa-lib alsa-plugins alsa-utils -- noconfirm
 	sudo systemctl enable bluetooth
 	sudo rfkill unblock all
 	sudo pacman -Sy iwd --noconfirm
