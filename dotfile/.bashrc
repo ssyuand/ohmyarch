@@ -8,6 +8,7 @@ export TERM=xterm-256color
 export JAVA_HOME='/usr/lib/jvm/java-17-openjdk/'
 export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH:$HOME/bin
 shopt -s autocd
+alias ..='cd ..'
 alias rm='trash-put'
 alias ls='ls -A -CF --color=auto'
 #alias matlab='~/r2020a/bin/matlab.sh'
