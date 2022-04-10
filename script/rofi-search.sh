@@ -8,6 +8,7 @@ URLS=(
   ["youtube"]="https://www.youtube.com/results?search_query="
   ["github"]="https://github.com/"
   ["stackoverflow"]="http://stackoverflow.com/search?q="
+  ["math"]="https://www.mathway.com/zh/Algebra?asciimath="
 )
 
 # List for rofi
