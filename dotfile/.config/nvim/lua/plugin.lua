@@ -11,6 +11,7 @@ return require('packer').startup(function()
 -- Packer can manage itself
 -- -- Install nvim-cmp, and buffer source as a dependency
   use 'wbthomason/packer.nvim'
+  use 'windwp/nvim-autopairs'
   use 'kyazdani42/nvim-web-devicons'
   use 'hoob3rt/lualine.nvim'
   use 'norcalli/nvim-colorizer.lua'
