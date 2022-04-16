@@ -2,6 +2,7 @@ if [[ -z $DISPLAY ]] || [[ $(tty) = /dev/tty2 ]];then
 	startx
 fi
 set -o vi
+bind -m vi-insert 'Control-l: clear-screen'
 export EDITOR=nvim
 export LANG=en_US.UTF-8
 export TERM=xterm-256color

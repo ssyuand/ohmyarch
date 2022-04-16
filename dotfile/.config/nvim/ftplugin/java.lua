@@ -9,7 +9,7 @@ local workspace_dir = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 
 local config = {
   cmd = {
-    '/usr/lib/jvm/java-17-openjdk/bin/java', -- or '/path/to/java11_or_newer/bin/java'
+    '/usr/lib/jvm/java-18-openjdk/bin/java', -- or '/path/to/java11_or_newer/bin/java'
     '-Declipse.application=org.eclipse.jdt.ls.core.id1',
     '-Dosgi.bundles.defaultStartLevel=4',
     '-Declipse.product=org.eclipse.jdt.ls.core.product',
