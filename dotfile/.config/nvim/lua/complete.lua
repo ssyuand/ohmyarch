@@ -57,5 +57,13 @@ vim.cmd('highlight! CmpItemKindFile guibg=NONE guifg=#C586C0')
 vim.cmd('highlight! CmpItemKindField guibg=NONE guifg=#C586C0')
 
 --<C-j>, <C-k> mapping
+_G.Next = function(str)
+	str = "<C-n>"
+	return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+_G.previous = function(str)
+	str = "<C-p>"
+	return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
 vim.api.nvim_set_keymap("i", "<C-j>", "v:lua.Next()", { expr = true })
 vim.api.nvim_set_keymap("i", "<C-k>", "v:lua.previous()", { expr = true })
