@@ -23,12 +23,40 @@ cmp.setup({
 	formatting = {
 		fields = { "abbr", "menu", "kind" };
 		format = function(entry, vim_item)
+			local kind_icons = {
+				Text = "",
+				Method = "",
+				Function = "",
+				Constructor = "",
+				Field = "ﰠ",
+				Variable = "",
+				Class = "ﴯ",
+				Interface = "",
+				Module = "",
+				Property = "ﰠ",
+				Unit = "塞",
+				Value = "",
+				Enum = "",
+				Keyword = "",
+				Snippet = "",
+				Color = "",
+				File = "",
+				Reference = "",
+				Folder = "",
+				EnumMember = "",
+				Constant = "",
+				Struct = "פּ",
+				Event = "",
+				Operator = "",
+				TypeParameter = "",
+			}
+			vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
 			vim_item.abbr = string.sub(vim_item.abbr, 1, 66)
 			return vim_item
 		end
 	},
 	experimental = {
-		ghost_text = false,
+		ghost_text = true,
 		native_menu = false
 	}
 })
