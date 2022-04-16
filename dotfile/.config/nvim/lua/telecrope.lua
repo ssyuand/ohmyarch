@@ -21,7 +21,7 @@ require('telescope').setup {
 --Allow insert the search_dirs first
 _G.open_telescope = function()
 	Dir = vim.fn.input("Dir is: ", "~/")
-	if Dir ~= "^C" then
+	if Dir ~= " " then
 		require("telescope.builtin").find_files({ search_dirs = { Dir }, hidden = true })
 	end
 end
@@ -33,7 +33,7 @@ vim.api.nvim_set_keymap('n', '<leader>fw', ':Telescope grep_string<CR>', { norem
 _G.cpp = function()
 	vim.cmd([[exec '!g++ -o a.out %']])
 	vim.cmd([[exec '!alacritty -e ./a.out &']])
-	vim.cmd([[exec "!alacritty -e bash -c './a.out && bash'"]])
+	vim.cmd([[exec "!alacritty -e bash -c './a.out | less' && bash"]])
 	vim.cmd([[exec '!rm a.out']])
 end
 vim.api.nvim_set_keymap('n', '<leader>cpp', ':lua cpp()<cr>', { noremap = true, silent = true })
@@ -41,6 +41,6 @@ vim.api.nvim_set_keymap('n', '<leader>cpp', ':lua cpp()<cr>', { noremap = true, 
 --compile java
 _G.java = function()
 	vim.cmd([[exec '!javac %']])
-	vim.cmd([[exec "!alacritty -e bash -c 'java % && bash'"]])
+	vim.cmd([[exec "!alacritty -e bash -c 'java % | less && bash'"]])
 end
 vim.api.nvim_set_keymap('n', '<leader>jj', ':lua java()<cr>', { noremap = true, silent = true })
