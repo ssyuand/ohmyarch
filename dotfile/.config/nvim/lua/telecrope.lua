@@ -27,30 +27,28 @@ end
 vim.api.nvim_set_keymap('n', '<leader>ff', ':lua open_telescope()<CR>', { noremap = true, silent = false })
 vim.api.nvim_set_keymap('n', '<leader>fw', ':Telescope grep_string<CR>', { noremap = true, silent = false }) -- need ripgrep!!!
 
---compile c++
-_G.cpp = function()
-	Option = vim.fn.input("do u want use less? (y/n):")
-	if Option == "n" then
-		vim.cmd([[exec 'silent !g++ -o a.out %']])
-		vim.cmd([[exec "silent !alacritty -e bash -c './a.out'"]])
-		vim.cmd([[exec 'silent !rm a.out']])
-	elseif Option == "y" then
-		vim.cmd([[exec 'silent !g++ -o a.out %']])
-		vim.cmd([[exec "silent !alacritty -e bash -c './a.out | less' && bash"]])
-		vim.cmd([[exec 'silent !rm a.out']])
+--compile...
+_G.compile = function()
+	if vim.bo.filetype == "c" or vim.bo.filetype == "cpp" then
+		Option = vim.fn.input("do u want use less? (y/n):")
+		if Option == "n" then
+			vim.cmd([[exec 'silent !g++ -o a.out %']])
+			vim.cmd([[exec "silent !alacritty -e bash -c './a.out'"]])
+			vim.cmd([[exec 'silent !rm a.out']])
+		elseif Option == "y" then
+			vim.cmd([[exec 'silent !g++ -o a.out %']])
+			vim.cmd([[exec "silent !alacritty -e bash -c './a.out | less' && bash"]])
+			vim.cmd([[exec 'silent !rm a.out']])
+		end
+	elseif vim.bo.filetype == "java" then
+		Option = vim.fn.input("do u want use less? (y/n):")
+		if Option == "n" then
+			vim.cmd([[exec 'silent !javac %']])
+			vim.cmd([[exec "silent !alacritty -e bash -c 'java % && exit'"]])
+		elseif Option == "y" then
+			vim.cmd([[exec 'silent !javac %']])
+			vim.cmd([[exec "silent !alacritty -e bash -c 'java % | less && exit'"]])
+		end
 	end
 end
-vim.api.nvim_set_keymap('n', '<leader>cpp', ':lua cpp()<cr>', { noremap = true, silent = true })
-
---compile java
-_G.java = function()
-	Option = vim.fn.input("do u want use less? (y/n):")
-	if Option == "n" then
-		vim.cmd([[exec 'silent !javac %']])
-		vim.cmd([[exec "silent !alacritty -e bash -c 'java % && exit'"]])
-	elseif Option == "y" then
-		vim.cmd([[exec 'silent !javac %']])
-		vim.cmd([[exec "silent !alacritty -e bash -c 'java % | less && exit'"]])
-	end
-end
-vim.api.nvim_set_keymap('n', '<leader>jj', ':lua java()<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cc', ':lua compile()<cr>', { noremap = true, silent = true })
