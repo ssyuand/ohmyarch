@@ -21,5 +21,5 @@ alias rm='trash-put'
 alias l='ls -A -CF --color=auto'
 alias ls='ls -A -CF --color=auto'
 alias ll='ls -all --color=auto'
-alias vi='nvim'
+alias v='nvim'
 PS1="\[\e[0;31m\]\u@\[\e[m\e[0;34m\]\h\[\e[m \e[0;32m\]\W\$(parse_git_branch) \$ \[\e[m\]"
