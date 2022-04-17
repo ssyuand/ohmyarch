@@ -29,7 +29,7 @@ vim.api.nvim_set_keymap('n', '<leader>fw', ':Telescope grep_string<CR>', { norem
 
 --compile c++
 _G.cpp = function()
-	Option = vim.fn.input("want use less(y/n):")
+	Option = vim.fn.input("do u want use less? (y/n):")
 	if Option == "n" then
 		vim.cmd([[exec 'silent !g++ -o a.out %']])
 		vim.cmd([[exec "silent !alacritty -e bash -c './a.out'"]])
@@ -44,7 +44,7 @@ vim.api.nvim_set_keymap('n', '<leader>cpp', ':lua cpp()<cr>', { noremap = true, 
 
 --compile java
 _G.java = function()
-	Option = vim.fn.input("want use less(y/n):")
+	Option = vim.fn.input("do u want use less? (y/n):")
 	if Option == "n" then
 		vim.cmd([[exec 'silent !javac %']])
 		vim.cmd([[exec "silent !alacritty -e bash -c 'java % && exit'"]])
