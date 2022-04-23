@@ -1,26 +1,32 @@
 if [[ -z $DISPLAY ]] || [[ $(tty) = /dev/tty2 ]];then
 	startx
 fi
-parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
+[[ -n "$TMUX" ]] && PROMPT_COMMAND='echo -n -e "\e]2;${PWD/${HOME}/~}\e\\"'
 set -o vi
 bind -m vi-insert 'Control-l: clear-screen'
 bind -m vi-insert 'Control-a: beginning-of-line'
 bind -m vi-insert 'Control-e: end-of-line'
 bind -m vi-insert 'Control-w: backward-kill-word'
+export PATH=/usr/local/bin:$PATH
 export EDITOR=nvim
 export LANG=en_US.UTF-8
-export TERM=xterm-256color
+#export TERM=xterm-256color
 export JAVA_HOME='/usr/lib/jvm/java-17-openjdk/'
 export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH:$HOME/bin
+export FZF_DEFAULT_COMMAND='fd . $HOME --type f --color=never --hidden --absolute-path'
+export FZF_DEFAULT_OPTS='--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b'
 shopt -s autocd
 alias ..='cd ..'
+alias vi='nvim'
 alias gs="git status"
 alias rm='trash-put'
-alias ducks='du -cks * | sort -n -r | head -n 10'
-alias l='ls -A -CF --color=auto'
-alias ls='ls -A -CF --color=auto'
-alias ll='ls -lh --color=auto'
-alias vi='nvim'
-PS1="\[\e[0;31m\]\u@\[\e[m\e[0;34m\]\h\[\e[m \e[0;32m\]\W\$(parse_git_branch) \$ \[\e[m\]"
+alias duck='du -cks * | sort -n -r | head -n 20'
+alias duak='du -ak | sort -n -r | head -n 20'
+alias l='ls -A -S -CF --color=auto'
+alias ll='ls -A -n -LSh --color=always'
+alias ls='ls -A -n -ltr --color=always'
+alias f='fzf'
+alias fd='fd . $HOME --absolute-path --type d . --color=never --hidden | fzf'
+alias c='cd `fd`'
+alias v='nvim `f`'
+PS1="\[\e[0;31m\]\u@\[\e[m\e[0;34m\]\h\[\e[m \e[0;32m\]\W \$ \[\e[m\]"
