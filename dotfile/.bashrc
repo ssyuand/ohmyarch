@@ -19,7 +19,7 @@ shopt -s autocd
 alias ..='cd ..'
 alias vi='nvim'
 alias gs="git status"
-alias rm='trash-put'
+alias rm='sudo trash-put'
 alias duck='du -cks * | sort -n -r | head -n 20'
 alias duak='du -ak | sort -n -r | head -n 20'
 alias l='ls -A -S -CF --color=auto'
